@@ -1,0 +1,71 @@
+<div class="container">
+    <div class="row">
+        <div class="card header">
+            <div class="card-body">
+                <img src="assets/logo.png" alt="">
+                <h4 class="card-title club-title">CLUB DEL SEGURO</h4>
+            </div>
+        </div>
+        <div class="card user col-4">
+            <!--Usuario-->
+            <div class="card-body">
+                <h5 class="card-title">Datos Personales</h5>
+                <div class="form-group">
+                    <label>Nombre</label>
+                    <input type="text" class="form-control form-control-sm" value="{{personal.quoteName}}" placeholder="Nombre">
+                </div>
+                <div class="form-group">
+                    <label>Rut</label>
+                    <input type="text" class="form-control form-control-sm" value="{{personal.quoteRut}}" placeholder="Rut">
+                </div>
+                <div class="form-group">
+                    <label>Año Vehículo</label>
+                    <input type="text" class="form-control form-control-sm" value="{{personal.carYear}}" placeholder="Edad">
+                </div>
+
+                <h5 class="card-title">Datos Contacto</h5>
+                <div class="form-group">
+                    <label>Comuna</label>
+                    <input type="text" class="form-control form-control-sm" value="{{personal.quoteCommune}}" placeholder="Comuna">
+                </div>
+                <div class="form-group">
+                    <label>Teléfono</label>
+                    <input type="text" class="form-control form-control-sm" value="{{personal.quotePhone}}" placeholder="Teléfono">
+                </div>
+                <div class="form-group">
+                    <label>Correo</label>
+                    <input type="email" class="form-control form-control-sm" value="{{personal.quoteEmail}}" placeholder="Correo">
+                </div>
+            </div>
+            
+        </div>
+    
+        <div class="card detail col-auto spacing">
+            <!--Detalle-->
+            <div class="card-body">
+                <h5 class="card-title">Detalle Planes</h5>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Plan ID</th>
+                            <th>CLP Mensual</th>
+                            <th>CLP Anual</th>
+                            <th>UF Mensual</th>
+                            <th>UF Anual</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let plan of personal.quoteResults">
+                            <th scope="row">{{plan.plan_id}}</th>
+                            <td>{{(plan.montly_real_rate_clp).toFixed(2)}}</td>
+                            <td>{{(plan.yearly_real_rate_clp).toFixed(2)}}</td>
+                            <td>{{(plan.montly_real_rate_uf).toFixed(2)}}</td>
+                            <td>{{(plan.yearly_real_rate_uf).toFixed(2)}}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    
+</div>

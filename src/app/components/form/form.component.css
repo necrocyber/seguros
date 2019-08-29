@@ -1,0 +1,57 @@
+.container {
+    
+}
+
+h5 {
+    color : #1E9EE8;
+}
+
+label {
+    color : #666666;
+}
+
+.header {
+    display: flex;
+    width: 100%;
+}
+
+img {
+    width: 50px;
+    display: inline-block;
+    margin-left: 15px;
+    margin-bottom: 9px;
+}
+
+.club-title {
+    display: inline-block;
+    margin-left: 10px;
+}
+
+.card {
+ margin-top: 10px;
+}
+
+.form-control {
+    background-color: #F1F7FF;
+}
+
+.spacing {
+    margin-left: 10px !important;
+}
+
+.col-auto {
+    flex: 1 1 auto;
+}
+
+.card-body {
+    padding: 0px !important;
+    margin-top: 10px;
+}
+
+.table {
+    margin-top: 20px !important;
+}
+
+.table th {
+    color : #666666;
+}

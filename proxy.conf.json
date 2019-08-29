@@ -1,0 +1,7 @@
+{
+    "/dev": {
+        "target": "https://zy16rhpv40.execute-api.us-east-1.amazonaws.com",
+        "secure": false,
+        "changeOrigin": true
+    }
+}
